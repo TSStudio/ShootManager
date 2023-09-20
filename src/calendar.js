@@ -53,8 +53,8 @@ export class CalendarEvent {
                 dateStart.getMonth() + 1
             }-${dateStart.getDate()} ${dateStart.getHours()}:${
                 dateStart.getMinutes() < 10
-                    ? "0" + dateEnd.getMinutes()
-                    : dateEnd.getMinutes()
+                    ? "0" + dateStart.getMinutes()
+                    : dateStart.getMinutes()
             }-${dateEnd.getHours()}:${
                 dateEnd.getMinutes() < 10
                     ? "0" + dateEnd.getMinutes()
