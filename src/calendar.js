@@ -49,6 +49,12 @@ export class CalendarEvent {
             dateStart.getMonth() === dateEnd.getMonth() &&
             dateStart.getDate() === dateEnd.getDate()
         ) {
+            if (dateEnd.getTime() - dateStart.getTime() > 1000 * 60 * 60 * 23) {
+                //all day event
+                `${dateStart.getFullYear()}-${
+                    dateStart.getMonth() + 1
+                }-${dateStart.getDate()}`;
+            }
             return `${dateStart.getFullYear()}-${
                 dateStart.getMonth() + 1
             }-${dateStart.getDate()} ${dateStart.getHours()}:${
@@ -65,8 +71,8 @@ export class CalendarEvent {
                 dateStart.getMonth() + 1
             }-${dateStart.getDate()} ${dateStart.getHours()}:${
                 dateStart.getMinutes() < 10
-                    ? "0" + dateEnd.getMinutes()
-                    : dateEnd.getMinutes()
+                    ? "0" + dateStart.getMinutes()
+                    : dateStart.getMinutes()
             }-${dateEnd.getFullYear()}-${
                 dateEnd.getMonth() + 1
             }-${dateEnd.getDate()} ${dateEnd.getHours()}:${
