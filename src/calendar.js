@@ -51,7 +51,7 @@ export class CalendarEvent {
         ) {
             if (dateEnd.getTime() - dateStart.getTime() > 1000 * 60 * 60 * 23) {
                 //all day event
-                `${dateStart.getFullYear()}-${
+                return `${dateStart.getFullYear()}-${
                     dateStart.getMonth() + 1
                 }-${dateStart.getDate()}`;
             }
