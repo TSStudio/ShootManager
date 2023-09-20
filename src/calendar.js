@@ -51,7 +51,25 @@ export class CalendarEvent {
         ) {
             return `${dateStart.getFullYear()}-${
                 dateStart.getMonth() + 1
-            }-${dateStart.getDate()} ${dateStart.getHours()}:${dateStart.getMinutes()}-${dateEnd.getHours()}:${
+            }-${dateStart.getDate()} ${dateStart.getHours()}:${
+                dateStart.getMinutes() < 10
+                    ? "0" + dateEnd.getMinutes()
+                    : dateEnd.getMinutes()
+            }-${dateEnd.getHours()}:${
+                dateEnd.getMinutes() < 10
+                    ? "0" + dateEnd.getMinutes()
+                    : dateEnd.getMinutes()
+            }`;
+        } else {
+            return `${dateStart.getFullYear()}-${
+                dateStart.getMonth() + 1
+            }-${dateStart.getDate()} ${dateStart.getHours()}:${
+                dateStart.getMinutes() < 10
+                    ? "0" + dateEnd.getMinutes()
+                    : dateEnd.getMinutes()
+            }-${dateEnd.getFullYear()}-${
+                dateEnd.getMonth() + 1
+            }-${dateEnd.getDate()} ${dateEnd.getHours()}:${
                 dateEnd.getMinutes() < 10
                     ? "0" + dateEnd.getMinutes()
                     : dateEnd.getMinutes()
