@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+#app,
+#container-main {
+    height: 100%;
+}
+#header {
+    background-color: var(--el-color-primary);
+    color: var(--el-color-white);
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+        Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC,
+        WenQuanYi Micro Hei, sans-serif;
+}
+#main-container {
+    height: 100%;
+}
+#error-container {
+    width: 100%;
+}
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+.el-aside {
+    padding: 20px;
+}
+.card {
+    margin: 10px 0;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+        Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC,
+        WenQuanYi Micro Hei, sans-serif;
+    transition: background-color 0.2s ease-in-out;
+}
+.card-color-orange {
+    background-color: rgba(255, 164, 28, 0.4);
+    color: rgb(114, 72, 7);
+}
+.card-color-orange:hover {
+    background-color: rgba(255, 164, 28, 0.6);
+}
+.card-color-gray {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
+.card-color-gray:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.card-color-blue {
+    background-color: rgba(0, 115, 255, 0.146);
+    color: rgb(0, 50, 90);
+}
+.card-color-blue:hover {
+    background-color: rgba(0, 115, 255, 0.21);
+}
+.card-summary {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.el-calendar {
+    --el-calendar-cell-width: 100px;
+}
+.el-calendar-day {
+    padding: 0px !important;
+}
+.calendar-day-has-event,
+.calendar-day-no-event {
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.calendar-day-has-event {
+    background-color: rgba(0, 115, 255, 0.146);
+    color: rgb(0, 50, 90);
+}
