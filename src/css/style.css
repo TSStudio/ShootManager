@@ -5,6 +5,28 @@ body {
 #container-main {
     height: 100%;
 }
+@media screen and (max-width: 768px) {
+    .el-container {
+        flex-direction: column;
+    }
+    .el-calendar__body {
+        padding: 0;
+    }
+    .el-aside {
+        padding: 5px !important;
+    }
+    .el-main {
+        --el-main-padding: 5px !important;
+    }
+    .el-calendar {
+        --el-calendar-cell-width: 250px !important;
+    }
+}
+@media screen and (max-width: 1124px) and (min-width: 769px) {
+    .el-calendar {
+        --el-calendar-cell-width: 150px !important;
+    }
+}
 #header {
     background-color: var(--el-color-primary);
     color: var(--el-color-white);
