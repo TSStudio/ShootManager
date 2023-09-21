@@ -99,7 +99,9 @@ END:VEVENT\n`;
     generateCard() {
         let card = document.createElement("div");
         card.classList.add("card");
-        if (this.end.getTime() < new Date().getTime()) {
+        if (this.summary.toLocaleLowerCase().includes("deadline")){
+            card.classList.add("card-color-red");
+        } else if (this.end.getTime() < new Date().getTime()) {
             card.classList.add("card-color-gray");
         } else if (this.start.getTime() < new Date().getTime()) {
             card.classList.add("card-color-orange");

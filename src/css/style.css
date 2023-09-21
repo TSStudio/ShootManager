@@ -82,6 +82,10 @@ body {
 .card-color-blue:hover {
     background-color: rgba(0, 115, 255, 0.21);
 }
+.card-color-red {
+    background-color: rgba(255, 40, 40, 0.1);
+    color: rgb(120, 40, 20);
+}
 .card-summary {
     font-size: 1.1em;
     font-weight: bold;
